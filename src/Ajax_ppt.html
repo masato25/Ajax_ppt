@@ -1,0 +1,77 @@
+<!-- original code from url=(0042)http://la.ma.la/misc/js/takahashi_600.html 
+     modified by masato25
+-->
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--you can put google font here-->
+  <!--you can put your javascript here-->
+  <script src="js_ptt_files/jquery-latest.js" type="text/javascript"></script>
+  <!--you can put your css file here-->
+</head>
+<body style="height:100%">
+
+<!--set display:none will hide the editer!-->
+<div style="display: inline;">
+<textarea id="s">
+<!-- if you want static article you can just add the raw text here directly -->
+</textarea>
+<button onkeyup="F()">change</button>
+<span style="text-align:center;top;">
+<b id="n" style="font-size:20px;background:#A52A2A;color:white">1/1</b>
+</span>
+</div>
+<br>
+<div class="mainpage" onclick="event.ctrlKey?o?--o:0:++o;F()">
+<!-- change to this for disable click event
+ <div class="mainpage" >
+-->
+<center id="Z" style="display: block; font-size: 7.30123px;">  <font style="font-family: 'Chau Philomene One', sans-serif;font-size:180px;color:black;">Takahashi <br><b id="redtext">高橋流</b><br> method</font></center>
+<script>
+  O=(d=document).body;
+  H="offsetHeight";
+  W="offsetWidth";
+  I="innerHTML";
+  function G(i)
+  {
+    return d.getElementById(i)
+  }
+  function T(i)
+  {
+    r.fontSize=i+'px'
+  }
+  function F()
+  {
+    P=G("s").value.split("----");
+    l=P.length;o=P[o]?o:0;
+    T(10)
+    r.display="inline";
+    if(R[I]=P[o].replace(/^[\r\n]+|[\r\n]+$/g,"").replace(/\r\n|[\r\n]/g,"<br>"))
+    {
+      G("n")[I]=(o+1)+"/"+l;
+      window.location.href = window.location.href.replace(/#.+/,"") + "#page=" + (o+1);
+      D=O[H];T(N=O[W]/R[W]*9);
+      r.display="block";
+      R[H]>D?T(D/R[H]*N*1):0
+    }
+  }
+  o=0;
+  r=(R=G("Z")).style;
+  F()
+/* remove the mark for enable keyboard moving --> && <--
+  //keyboard contorl
+  $(document).keydown(function(e){
+    if (e.keyCode == 37) { 
+           o=--o;
+       F();
+    }
+    if (e.keyCode == 39) { 
+           o=++o;
+       F();
+    }
+  });
+*/  
+</script>
+</div>
+
+
+</body></html>
